@@ -1,0 +1,1301 @@
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SegoeUIItalic";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SegoeUILight";
+  src: url("../fonts/SegoeUILight/SegoeUILight.eot");
+  src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"), url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SegoeUISemiBold";
+  src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
+  src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"), url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  margin: 0;
+  font-family: "SegoeUIRegular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  display: none;
+}
+.btn {
+  padding: 12px 0;
+  display: block;
+  width: 100%;
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #90f595;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.btn-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn-close::before,
+.btn-close::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #c4a47e;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.btn-close::after {
+  position: absolute;
+  top: 13px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.link--phone {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #222;
+}
+.background-popup {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.background-popup--closed {
+  display: none;
+}
+.page-fixed {
+  position: fixed;
+}
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+.main-header {
+  padding: 15px 15px;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.main-header--fixed {
+  position: fixed;
+}
+.main-header__phone {
+  display: none;
+  margin-left: 160px;
+  padding-left: 30px;
+  background-image: url("img/phone-contact.svg");
+  background-repeat: no-repeat;
+}
+.main-header__bnt-callback {
+  display: none;
+}
+.main-page {
+  position: relative;
+  top: 60px;
+}
+.logo {
+  position: absolute;
+  left: 15px;
+  width: 130px;
+  margin-top: -15px;
+  padding: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-align: center;
+  box-shadow: 0px -70px 30px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  background-color: white;
+}
+.logo__img {
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+.logo__description {
+  display: block;
+  font-family: "SegoeUIBold", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-menu__item {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  color: #333;
+  text-align: center;
+}
+.main-menu__item--callback {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.main-menu__link {
+  display: block;
+  cursor: pointer;
+}
+.main-menu--closed {
+  display: none;
+}
+.main-menu__toggle {
+  padding: 0;
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 3px solid #c4a47e;
+  background-color: white;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+}
+.main-menu__hamburger {
+  margin: 0 auto;
+  display: block;
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #c4a47e;
+}
+.main-menu__hamburger::after,
+.main-menu__hamburger::before {
+  position: relative;
+  content: "";
+  display: block;
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #c4a47e;
+}
+.main-menu__hamburger::after {
+  top: 2px;
+}
+.main-menu__hamburger::before {
+  top: -6px;
+}
+.main-menu__btn-close {
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 9px;
+  width: 30px;
+  height: 30px;
+}
+.main-menu__link {
+  color: #333333;
+}
+.first-screen {
+  padding: 15px;
+  padding-top: 107px;
+  position: relative;
+  display: flex;
+  background-image: url("img/background-first-screen.jpg");
+  background-position: center top;
+}
+.first-screen__title {
+  margin: 0;
+  padding-bottom: 40px;
+  font-family: "SegoeUIBlack", sans-serif;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 46px;
+  letter-spacing: -3px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px 8px 7px rgba(61, 34, 8, 0.2);
+  box-sizing: border-box;
+}
+.chips {
+  display: inline-block;
+  position: absolute;
+  z-index: 5;
+}
+.chips--1 {
+  left: 136px;
+  top: 63px;
+  width: 63px;
+  height: 76px;
+  background-image: url("img/chips-1.png");
+}
+.chips--2 {
+  left: 186px;
+  bottom: 33px;
+  width: 45px;
+  height: 40px;
+  background-image: url("img/chips-2.png");
+}
+.chips--3 {
+  display: none;
+  width: 63px;
+  height: 76px;
+  background-image: url("img/chips-1.png");
+}
+.about {
+  padding: 30px 15px;
+}
+.about__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: #333;
+  text-align: center;
+}
+.about p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #333;
+}
+.features {
+  padding: 0 15px;
+  padding-bottom: 40px;
+}
+.features__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.features__item {
+  margin-bottom: 10px;
+  padding: 20px;
+  padding-left: 130px;
+  display: block;
+  font-size: 11px;
+  line-height: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-position: 43px center;
+  background-repeat: no-repeat;
+}
+.features__item span {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+}
+.features__item:last-child {
+  margin: 0;
+}
+.features__item--minimal {
+  background-image: url("img/boxes.svg");
+  background-size: 60px;
+}
+.features__item--pickup {
+  background-image: url("img/shipped.svg");
+  background-size: 69px;
+}
+.features__item--payment {
+  background-image: url("img/hand.svg");
+  background-size: 58px;
+}
+.goods {
+  padding: 37px 15px;
+  background-color: #f9f9f9;
+}
+.goods__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.goods__item {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 212px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.2);
+}
+.goods__item:last-child {
+  margin-bottom: 0;
+}
+.goods__descr-wrapper {
+  padding: 15px;
+  padding-top: 20px;
+}
+.goods__descr {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  text-align: center;
+}
+.goods__price {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 90%;
+  font-family: "SegoeUIBold", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.delivery__wrapper {
+  padding: 0 15px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+.delivery__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.delivery p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+}
+.delivery__banner {
+  display: flex;
+  height: 305px;
+  background-image: url("img/background-delivery-banner.jpg");
+}
+.delivery__banner-title {
+  margin: auto;
+  font-family: "SegoeUIBlack", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -2px;
+  color: white;
+  text-align: center;
+}
+.contacts {
+  box-sizing: border-box;
+}
+.contacts__block {
+  padding: 40px 15px;
+}
+.contacts__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 30px;
+  line-height: 20px;
+  text-align: center;
+}
+.contacts p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+}
+.contacts__btn {
+  margin: 0 auto;
+  width: 185px;
+  margin-top: 20px;
+}
+.contacts__phone {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+}
+.contacts__mail {
+  display: block;
+  text-align: center;
+}
+.contacts__map {
+  box-sizing: border-box;
+  height: 300px;
+}
+.contacts__map iframe {
+  height: 240px;
+}
+.main-footer {
+  padding: 25px 15px;
+  height: 90px;
+  box-sizing: border-box;
+  background-color: #303030;
+}
+.main-footer span {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  text-align: center;
+}
+.order-form--closed {
+  display: none;
+}
+.order-form__title {
+  margin: 0;
+  margin-bottom: 17px;
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #333333;
+  text-align: center;
+}
+.order-form__input {
+  padding: 13px 0;
+  margin-bottom: 15px;
+  width: 100%;
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #333333;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.order-form__input::-webkit-input-placeholder {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #777;
+}
+.order-form__input:-ms-input-placeholder {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #777;
+}
+.order-form__input::-ms-input-placeholder {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #777;
+}
+.order-form__input::placeholder {
+  font-family: "SegoeUISemiBold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #777;
+}
+.order-form__descr {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #a0a0a0;
+  text-align: center;
+}
+.order-form__btn-close {
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 9px;
+  width: 30px;
+  height: 30px;
+}
+.popup {
+  padding: 23px;
+  margin: 0 auto;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.popup--order {
+  padding-top: 40px;
+}
+@media (min-width: 480px) {
+  .main-header__phone {
+    display: inline;
+  }
+  .first-screen {
+    padding-top: 105px;
+  }
+  .first-screen__title {
+    font-size: 82px;
+    line-height: 72px;
+  }
+  .chips--1 {
+    left: 202px;
+    top: 70px;
+  }
+  .chips--2 {
+    left: 170px;
+    bottom: 43px;
+  }
+  .about__title {
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .features__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .features__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 137px;
+    padding: 20px 7px;
+    padding-top: 90px;
+    text-align: center;
+    box-sizing: border-box;
+    background-position: center 20px;
+  }
+  .features__item span {
+    margin-top: auto;
+    display: block;
+  }
+  .goods__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .goods__item {
+    margin: 0;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+  }
+  .goods__descr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-grow: 1;
+  }
+  .goods__price {
+    margin-top: auto;
+  }
+  .delivery__banner {
+    padding: 0 50px;
+  }
+  .delivery__banner-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media (min-width: 600px) {
+  .main-header__phone {
+    margin-left: 60%;
+  }
+  .logo {
+    padding-top: 30px;
+    width: 180px;
+    height: 180px;
+  }
+  .logo__img {
+    margin-bottom: 18px;
+  }
+  .first-screen {
+    padding-top: 140px;
+    height: 500px;
+    box-sizing: border-box;
+  }
+  .first-screen__title {
+    font-size: 105px;
+    line-height: 91px;
+  }
+  .chips--1 {
+    left: 286px;
+    top: 189px;
+  }
+  .chips--2 {
+    left: 166px;
+    bottom: 70px;
+  }
+  .about {
+    padding-top: 40px;
+  }
+  .about__title {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  .features__item {
+    padding-top: 120px;
+    width: 175px;
+    font-size: 14px;
+    line-height: 18px;
+    background-position: center 30px;
+  }
+  .features__item span {
+    font-size: 25px;
+    line-height: 38px;
+  }
+  .features__item--minimal {
+    background-size: 77px;
+  }
+  .features__item--pickup {
+    background-size: 88px;
+  }
+  .features__item--payment {
+    background-size: 74px;
+  }
+  .goods__list {
+    justify-content: space-around;
+  }
+  .goods__item {
+    width: 245px;
+  }
+  .goods__price {
+    width: 70%;
+  }
+  .delivery__wrapper {
+    padding-top: 35px;
+  }
+  .delivery__title {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+  .delivery p {
+    font-size: 16px;
+  }
+  .contacts {
+    position: relative;
+    height: 450px;
+    box-sizing: border-box;
+  }
+  .contacts__block {
+    padding: 35px;
+    position: absolute;
+    top: 46px;
+    left: 54px;
+    width: 350px;
+    height: 290px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+  .contacts__title {
+    font-size: 40px;
+    text-align: left;
+  }
+  .contacts__phone {
+    text-align: left;
+  }
+  .contacts p {
+    text-align: left;
+  }
+  .contacts__map iframe {
+    height: 450px;
+  }
+  .contacts__btn {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .main-footer {
+    padding: 35px 15px;
+    margin-top: 60px;
+  }
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  .link--phone {
+    line-height: 48px;
+  }
+  .main-header {
+    height: 80px;
+  }
+  .main-header__wrapper {
+    display: flex;
+    justify-content: left;
+  }
+  .main-header__phone {
+    padding-left: 38px;
+    margin: 0;
+    background-size: 28px;
+    background-position: left center;
+  }
+  .main-header__bnt-callback {
+    padding: 13px 0;
+    margin-left: 235px;
+    margin-right: 30px;
+    display: block;
+    width: 235px;
+    font-family: "SegoeUISemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+  }
+  .main-page {
+    top: 80px;
+  }
+  .main-menu__item--callback {
+    display: none;
+  }
+  .main-menu__toggle {
+    top: 19px;
+  }
+  .features__item {
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 245px;
+  }
+  .features__item--minimal {
+    background-size: 87px;
+  }
+  .features__item--pickup {
+    background-size: 96px;
+  }
+  .features__item--payment {
+    background-size: 86px;
+  }
+  .goods__item {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .main-header__bnt-callback {
+    margin-left: auto;
+  }
+  .logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .main-menu--closed {
+    order: -1;
+    display: block;
+  }
+  .main-menu__btn-close {
+    display: none;
+  }
+  .main-menu__toggle {
+    display: none;
+  }
+  .main-menu__list {
+    display: flex;
+  }
+  .main-menu__item {
+    padding: 0;
+    line-height: 44px;
+    box-sizing: border-box;
+  }
+  .main-menu__item:hover,
+  .main-menu__item--active {
+    border: 1px solid #e78246;
+    border-radius: 6px;
+  }
+  .main-menu__item:hover .main-menu__link {
+    padding: 0 22px;
+    color: #e78246;
+  }
+  .main-menu__link {
+    padding: 0 23px;
+  }
+  .first-screen {
+    padding-top: 110px;
+  }
+  .first-screen__wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .first-screen__title {
+    font-size: 120px;
+    line-height: 100px;
+  }
+  .chips--1 {
+    left: 484px;
+    top: 278px;
+  }
+  .chips--2 {
+    left: 721px;
+    bottom: 70px;
+  }
+  .chips--3 {
+    display: block;
+    top: 200px;
+    left: 178px;
+    -webkit-transform: rotate(21deg);
+            transform: rotate(21deg);
+  }
+  .about {
+    padding-top: 65px;
+  }
+  .about p {
+    font-size: 16px;
+  }
+  .about p:last-child {
+    margin-top: 20px;
+  }
+  .features__item {
+    width: 375px;
+  }
+  .delivery__wrapper {
+    padding-top: 65px;
+  }
+  .delivery__banner {
+    padding: 0 440px;
+  }
+  .delivery__banner-title {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .contacts__block-wrapper {
+    position: relative;
+  }
+  .contacts__block {
+    left: 0;
+  }
+  .main-footer {
+    margin-top: 80px;
+  }
+  .order-form__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .order-form__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .order-form__input {
+    width: 545px;
+  }
+  .order-form__btn-submit {
+    width: 150px;
+  }
+  .popup {
+    width: 1000px;
+  }
+}
