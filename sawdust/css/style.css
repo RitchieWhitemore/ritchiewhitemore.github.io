@@ -101,6 +101,7 @@ img {
   width: 100%;
   position: absolute;
   top: 0;
+  z-index: 20;
 }
 .background-popup--closed {
   display: none;
@@ -614,6 +615,8 @@ template {
   display: flex;
   background-image: url("img/background-first-screen.jpg");
   background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .first-screen__title {
   margin: 0;
@@ -1295,7 +1298,10 @@ template {
   .order-form__btn-submit {
     width: 150px;
   }
+  .order-form__descr {
+    width: 460px;
+  }
   .popup {
-    width: 1000px;
+    width: 800px;
   }
 }

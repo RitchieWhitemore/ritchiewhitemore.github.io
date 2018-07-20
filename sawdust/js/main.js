@@ -9,7 +9,7 @@ const backgroundPopup = document.body.querySelector(`.background-popup`);
 
 const onShowMenu = () => {
   mainMenu.classList.toggle(`main-menu--closed`);
-  mainMenu.classList.toggle(`popup`)
+  mainMenu.classList.toggle(`popup`);
   backgroundPopup.classList.toggle(`background-popup--closed`);
 };
 
@@ -42,7 +42,7 @@ const onShowOrder = (mainMenuFlag) => {
   orderForm.classList.toggle(`order-form--closed`);
 
   backgroundPopup.classList.toggle(`background-popup--closed`);
-  backgroundPopup.style.height = pageYOffset + innerHeight + `px`;
+  backgroundPopup.style.height = document.body.scrollHeight + `px`;
 };
 
 contactBtn.onclick = () => onShowOrder();
