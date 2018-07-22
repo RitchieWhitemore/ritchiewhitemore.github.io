@@ -81,7 +81,6 @@ Array.from(mainMenuLink).forEach((it) => {
   })
 });
 
-
 if (window.innerWidth >= 1200) {
   window.onhashchange = (evt) => {
 
@@ -101,7 +100,7 @@ const contacts = document.querySelector(`.contacts`);
 document.onscroll = () => {
 
 
-  if (goods.getBoundingClientRect().top <= 200 ) {
+  if (goods.getBoundingClientRect().top <= 200) {
     Array.from(mainMenuLink).forEach((it) => {
       if (it.id === `follow-goods`) {
         it.parentElement.classList.add(`main-menu__item--active`);
@@ -133,5 +132,119 @@ document.onscroll = () => {
         it.parentElement.classList.remove(`main-menu__item--active`);
       }
     });
+  }
+};
+
+//********************************************************
+
+const orderFormBtnSubmit = document.querySelector(`.order-form__btn-submit`);
+const formOrder = document.querySelector(`.order-form__form`);
+
+const formInputs = document.forms[0].querySelectorAll('input');
+
+Array.from(formInputs).forEach((it) => {
+  it.oninput = (evt) => {
+    evt.currentTarget.nextElementSibling.style.display = `none`;
+  }
+});
+
+window.backend = {
+  upload: function (data, onLoad) {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+
+    xhr.open('POST', `/modules/mail.php`);
+
+    xhr.addEventListener('load', function () {
+      onLoad();
+    });
+    xhr.send(data);
+
+  }
+};
+
+class CustomValidation {
+
+  constructor() {
+    this.invalidities = [];
+  }
+
+  checkValidity(input) {
+
+    const validity = input.validity;
+
+    if (validity.patternMismatch) {
+      this.addInvalidity('This is the wrong pattern for this field');
+    }
+
+    if (validity.rangeOverflow) {
+      const max = getAttributeValue(input, 'max');
+      this.addInvalidity('The maximum value should be ' + max);
+    }
+
+    if (validity.rangeUnderflow) {
+      const min = getAttributeValue(input, 'min');
+      this.addInvalidity('The minimum value should be ' + min);
+    }
+
+    if (validity.stepMismatch) {
+      const step = getAttributeValue(input, 'step');
+      this.addInvalidity('This number needs to be a multiple of ' + step);
+    }
+
+    if (input.value === ``) {
+      this.addInvalidity('Заполните поле');
+    }
+
+  }
+
+  addInvalidity(message) {
+    this.invalidities.push(message);
+  }
+
+  get Invalidities() {
+    return this.invalidities.join('. \n');
+  }
+}
+
+orderFormBtnSubmit.onclick = (evt) => {
+  evt.preventDefault();
+
+  const validity = function () {
+    let valid = true;
+    for (let i = 0; i < formInputs.length; i++) {
+
+      const input = formInputs[i];
+
+      if (input.checkValidity() == false) {
+        valid = false;
+        const inputCustomValidation = new CustomValidation();
+        inputCustomValidation.checkValidity(input);
+        const customValidityMessage = inputCustomValidation.Invalidities;
+
+        input.nextElementSibling.textContent = customValidityMessage;
+        input.nextElementSibling.style.display = `block`;
+
+      }
+    }
+    return valid;
+  };
+
+  const onLoad = () => {
+    onShowOrder();
+
+    const div = document.createElement(`div`);
+    div.className = `alert alert--success`;
+    div.innerHTML = `Сообщение отправленно`;
+
+    document.body.appendChild(div);
+
+    setTimeout(() => {
+      document.body.removeChild(div);
+    }, 3000);
+  };
+
+  if (validity()) {
+    window.backend.upload(new FormData(formOrder), onLoad);
   }
 };

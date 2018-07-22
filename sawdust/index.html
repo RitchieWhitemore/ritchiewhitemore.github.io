@@ -162,9 +162,16 @@
 <div class="popup popup--order order-form order-form--closed">
     <button class="order-form__btn-close btn-close" type="button"></button>
     <h2 class="order-form__title">Свяжитесь с нашими специалистами<br>для заказа и уточнения условий доставки</h2>
-    <form class="order-form__form" action="">
-        <input class="order-form__input" name="name" placeholder="ФИО">
-        <input class="order-form__input" name="phone" placeholder="Телефон">
+    <form class="order-form__form" action="/modules/mail.php">
+        <div class="order-form__input-wrapper">
+            <input class="order-form__input" name="name" placeholder="ФИО" required>
+            <span class="order-form__input-error">Заполните это поле</span>
+        </div>
+        <div class="order-form__input-wrapper">
+            <input class="order-form__input" name="phone" placeholder="Телефон" required>
+            <span class="order-form__input-error">Заполните это поле</span>
+        </div>
+        <textarea class="order-form__input" name="comment" placeholder="Дополнительная информация о заказе"></textarea>
         <p class="order-form__descr">Нажимая кнопку, вы соглашаетесь с условаиями использования персональных данных</p>
         <button class="order-form__btn-submit btn" type="submit">Отправить</button>
     </form>
